@@ -2,9 +2,9 @@ import React from "react";
 
 const MessageInput = () => {
   return (
-    <div className="max-w-2xl mx-auto">
+    <div className="max-w-2xl mx-auto bg-indigo-100 pb-8 ">
       <form>
-        <label for="chat" className="sr-only">
+        <label  className="sr-only">
           Your message
         </label>
         <div className="flex items-center py-2 px-3 bg-gray-50 rounded-lg dark:bg-gray-700">
@@ -16,7 +16,7 @@ const MessageInput = () => {
           ></textarea>
           <button
             type="submit"
-            className="inline-flex justify-center p-2 text-blue-600 rounded-full cursor-pointer hover:bg-blue-100 dark:text-blue-500 dark:hover:bg-gray-600"
+            className="inline-flex justify-center p-2 text-blue-500 rounded-full cursor-pointer hover:bg-blue-100 dark:text-blue-500 dark:hover:bg-gray-600"
           >
             <svg
               className="w-6 h-6 rotate-90"
