@@ -3,6 +3,7 @@ export const registerUser = createSlice({
   name: "counter",
   initialState: {
     userName: "",
+    message:"",
     messages: [],
   },
   reducers: {
@@ -10,10 +11,20 @@ export const registerUser = createSlice({
     register: (state, action) => {
       state.userName = action.payload;
     },
+    message: (state, action) => {
+      state.message = action.payload;
+    },
+    clear: (state,) => {
+      state.message = "";
+    },
+    //adds mesages to the messages array
+    addMessage: (state, action) => {
+      state.messages = [action.payload,...state.messages];
+    },
   },
 });
 
 // Action creators are generated for each case reducer function
-export const { register, LoadUser } = registerUser.actions;
+export const { register, message,clear ,addMessage} = registerUser.actions;
 
 export default registerUser.reducer;
