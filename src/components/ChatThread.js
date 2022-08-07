@@ -1,6 +1,6 @@
 import React from "react";
 
-const ChatThread = ({position}) => {
+const ChatThread = ({position,message}) => {
   return (
     <div className={`flex items-end ${position} pt-2 w-full  `}>
       <div className="  " style={{ maxWidth: '50%' }}>
@@ -11,7 +11,7 @@ const ChatThread = ({position}) => {
           <div className="font-bold">T</div>
         </div>
         <div className="bg-indigo-300 px-5 py-2 text-left ml-5 text-white rounded rounded-tr-3xl rounded-bl-3xl">
-          message fsdfsdfsdfsdf sdffs dfsfs ffsdfsdfsf
+          { message }
         </div>
       </div>
     </div>

@@ -1,18 +1,28 @@
 import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { message,clear } from "../redux/RegisteUser";
 
-const MessageInput = () => {
+const MessageInput = ({sendMessage}) => {
+  const dispatch = useDispatch();
+  const input = useSelector((state) => state.registeredUser.message);
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    sendMessage()
+    dispatch(clear())
+  };
   return (
     <div className="max-w-2xl mx-auto bg-indigo-100 pb-8 ">
-      <form>
-        <label  className="sr-only">
-          Your message
-        </label>
+      
+      <form onSubmit={handleSubmit}>
+        <label className="sr-only">Your message</label>
         <div className="flex items-center py-2 px-3 bg-gray-50 rounded-lg dark:bg-gray-700">
           <textarea
             id="chat"
             rows="1"
             className="block mx-4 p-2.5 w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             placeholder="Your message..."
+            value={input}
+            onChange={(e) => dispatch(message(e.target.value))}
           ></textarea>
           <button
             type="submit"
