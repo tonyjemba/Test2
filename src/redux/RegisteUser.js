@@ -19,7 +19,7 @@ export const registerUser = createSlice({
     },
     //adds mesages to the messages array
     addMessage: (state, action) => {
-      state.messages = [...state.messages,action.payload];
+      state.messages = [action.payload,...state.messages];
     },
   },
 });
