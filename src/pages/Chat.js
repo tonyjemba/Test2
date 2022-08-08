@@ -20,7 +20,7 @@ const Chat = () => {
           <div className=" h-full pb-28  flex  min-h-min flex-col-reverse overflow-auto  content-end  pl-1     ">
             
             {
-              messages.map((msg,index)=><ChatThread key={index} message={`${msg}`}/>)
+              messages.map((msg,index)=><ChatThread key={index} message={`${msg}`} position="justify-end"/>)
             }
           </div>
           <div className=" fixed w-full    inset-x-0 bottom-0  ">
