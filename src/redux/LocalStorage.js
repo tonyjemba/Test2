@@ -1,4 +1,4 @@
-const KEY = "messages";
+const KEY = "USER"
 //gets user from local storage
 export function loadUser() {
   try {
