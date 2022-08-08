@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import {loadUser,saveUser} from "./LocalStorage";
 export const registerUser = createSlice({
   name: "counter",
   initialState: {
@@ -21,10 +22,14 @@ export const registerUser = createSlice({
     addMessage: (state, action) => {
       state.messages = [action.payload,...state.messages];
     },
+    SaveUser:(state,action)=>{
+      saveUser(action.payload);
+    },
+   
   },
 });
 
 // Action creators are generated for each case reducer function
-export const { register, message,clear ,addMessage} = registerUser.actions;
+export const { register, message,clear ,addMessage,SaveUser} = registerUser.actions;
 
 export default registerUser.reducer;

@@ -1,4 +1,4 @@
-const KEY = "messages";
+const KEY = `USER_${Math.floor(Math.random() * 10)}`
 //gets user from local storage
 export function loadUser() {
   try {
