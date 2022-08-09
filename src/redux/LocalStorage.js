@@ -1,21 +1,20 @@
-const KEY = `USER_${Math.floor(Math.random() * 10)}`
-//gets user from local storage
-export function loadUser() {
-  try {
-    const serializedUser = localStorage.getItem(KEY);
-    if (!serializedUser) return "";
-    return serializedUser;
-  } catch (e) {
-    return undefined;
-  }
-}
+// const KEY = `USER_${Math.floor(Math.random() * 10)}`
+// //gets user from local storage
+// export function loadUser() {
+//   try {
+//     const serializedUser = JSON.parse( localStorage.getItem(KEY))
+//     return serializedUser;
+//   } catch (e) {
+//     return undefined;
+//   }
+// }
 
-//loads user in local storage
-export async function saveUser(state) {
-  try {
-    const serializedstate = JSON.stringify(state);
-    localStorage.setItem(KEY, serializedstate);
-  } catch (e) {
-    return null
-  }
-}
+// //loads user in local storage
+// export async function saveUser(user,data) {
+//   try {
+//     const Data = JSON.stringify(data);
+//     localStorage.setItem(user, Data);
+//   } catch (e) {
+//     return null
+//   }
+// }
