@@ -15,9 +15,6 @@ const Chat = () => {
   //       dispatch(setMessages(localStorage.getItem(user)));
 
   useEffect(() => {
-  
-      
-    
     //loads user data to local storage
     localStorage.setItem(user, JSON.stringify(messages));
     //console.log(localStorage.getItem(user, JSON.parse(user)));
